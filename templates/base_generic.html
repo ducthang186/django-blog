@@ -1,0 +1,8 @@
+<!-- ... other HTML ... -->
+
+<nav>
+    <a href="{% url 'post_list' %}">Posts</a> {% if request.user.is_staff %}
+    <a href="{% url 'draft_list' %}">Drafts</a> {% endif %}
+</nav>
+
+{% block content %}{% endblock %}

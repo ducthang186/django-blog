@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %} {% block content %}
+<h1>Drafts</h1>
+<ul>
+    {% for draft in drafts %}
+    <li>
+        {{ draft.title }}
+        <a href="{% url 'publish_post' pk=draft.pk %}">Publish</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
